@@ -6,8 +6,6 @@ export default Ember.Route.extend({
 
 //Include Commas on the exported route, it is an object.
   model() {
-    return rentals;
+    return this.store.findAll('rental');
   },
-
-
 });
