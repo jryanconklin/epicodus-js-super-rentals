@@ -5,7 +5,10 @@ import Ember from 'ember';
 export default Ember.Route.extend({
 //Include Commas on the exported route, it is an object.
   model() {
-    return this.store.findAll('rental');
+    return Ember.RSVP.hash({
+      rentals: this.store.findAll('rental'),
+      reviews: this.store.findAll('review')
+    })
   },
 
   actions: {
