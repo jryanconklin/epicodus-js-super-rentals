@@ -1,28 +1,21 @@
-<div>
-  <h1 id="headerText"> Welcome to Super Rentals </h1>
+<h1> Welcome to Super Rentals </h1>
 
-  We hope you find exactly what you're looking for in a place to stay.
+We hope you find exactly what you're looking for in a place to stay.
 
-  <ul>
-    {{#each model as |rental|}}
-      {{rental-tile rental=rental}}
-    {{/each}}
-  </ul>
+<h2> Available Rentals </h2>
 
-  {{new-rental saveRental2="saveRental3"}}
+<ul>
+  {{#each model.rentals as |rental|}}
+    {{rental-tile rental=rental}}
+  {{/each}}
+</ul>
 
-  <h2>All Reviews</h2>
+{{new-rental saveRental2="saveRental3"}}
 
-  <ul>
-    {{#each model.reviews as |review|}}
-      <li>{{review.rating}} - {{review.content}} - by {{review.author}}</li>
-    {{/each}}
-  </ul>
+<h2> All Reviews </h2>
 
-  <hr>
-
-  <br>
-  {{#link-to 'about'}}About{{/link-to}}
-  <br>
-  {{#link-to 'contact'}}Contact Us{{/link-to}}
-</div>
+<ul>
+  {{#each model.reviews as |review|}}
+    <li>{{review.rating}} - {{review.content}} - by {{review.author}}</li>
+  {{/each}}
+</ul>

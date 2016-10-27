@@ -14,10 +14,10 @@ module.exports = function(environment) {
     },
 
     firebase: {
-      apiKey: 'AIzaSyDxLxcfaAzhXj-_4atxpyevoXfni4ZYmgw',
-      authDomain: 'ember-rentals.firebaseapp.com',
-      databaseURL: 'https://ember-rentals.firebaseio.com',
-      storageBucket: 'ember-rentals.appspot.com',
+      apiKey: "AIzaSyAlLVYcKzSUDtDDiFO19-7Wgv9pk90qvME",
+      authDomain: "super-rentals-edc20.firebaseapp.com",
+      databaseURL: "https://super-rentals-edc20.firebaseio.com",
+      storageBucket: "super-rentals-edc20.appspot.com"
     },
 
     APP: {

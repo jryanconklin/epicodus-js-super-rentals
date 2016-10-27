@@ -12,13 +12,20 @@ export default Ember.Route.extend({
         }
       });
       rental.save();
-      //This code differs from lesson. Redirect to current page, rather than index. SUPER COOL, GOOD JOB!
       this.transitionTo('/rental/params.rental_id');
     },
-
     destroyRental(rental) {
       rental.destroyRecord();
       this.transitionTo('index');
+    },
+    saveReview(params) {
+      var newReview = this.store.createRecord('review', params);
+      var rental = params.rental;
+      rental.get('reviews').addObject(newReview);
+      newReview.save().then(function() {
+        return rental.save();
+      });
+      this.transitionTo('rental', rental);
     }
   }
 });
