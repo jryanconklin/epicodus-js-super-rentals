@@ -5,9 +5,10 @@ available by arrangement through {{rental.owner}}.
 
 
 <h2> Reviews </h2>
+{{rental-popularity rental}}
 <ul>
-  {{#each rental.reviews as |review|}}
-    {{review-tile review=review}}
+  {{#each sortedReviews as |review|}}
+    {{review-tile review=review destroyReview="destroyReview"}}
   {{/each}}
 </ul>
 
